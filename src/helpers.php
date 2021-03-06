@@ -10,12 +10,12 @@ use Overtrue\EasySms\EasySms;
 use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 use Overtrue\EasySms\Exceptions\InvalidArgumentException;
 
-if (!function_exists('sendSms')) {
+if (!function_exists('sms_send')) {
     /**
      * @return array|EasySms
      * @throws NoGatewayAvailableException|InvalidArgumentException
      */
-    function sendSms()
+    function sms_send()
     {
         $arguments = func_get_args();
         /** @var EasySms $sms */

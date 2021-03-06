@@ -35,6 +35,6 @@ class NotificationChannel
             return;
         }
         $mobile = $notifiable->routeNotificationFor('mobile', $notification);
-        return sendSms($mobile, $message);
+        return sms_send($mobile, $message);
     }
 }
