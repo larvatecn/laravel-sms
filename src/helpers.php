@@ -5,19 +5,21 @@
  * @link http://www.larva.com.cn/
  * @license http://www.larva.com.cn/license/
  */
-use Overtrue\EasySms\EasySms;
 
-if (!function_exists('sms')) {
+use Overtrue\EasySms\EasySms;
+use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
+use Overtrue\EasySms\Exceptions\InvalidArgumentException;
+
+if (!function_exists('sendSms')) {
     /**
      * @return array|EasySms
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
-     * @throws \Overtrue\EasySms\Exceptions\NoGatewayAvailableException
+     * @throws NoGatewayAvailableException|InvalidArgumentException
      */
-    function sms()
+    function sendSms()
     {
         $arguments = func_get_args();
         /** @var EasySms $sms */
-        $sms = app('sms');
+        $sms = app(EasySms::class);
         if (empty($arguments)) {
             return $sms;
         }

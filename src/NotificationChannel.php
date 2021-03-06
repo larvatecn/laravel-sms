@@ -9,6 +9,8 @@
 namespace Larva\Sms;
 
 use Illuminate\Notifications\Notification;
+use Overtrue\EasySms\Exceptions\InvalidArgumentException;
+use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
 
 /**
  * 通知渠道
@@ -20,19 +22,19 @@ class NotificationChannel
     /**
      * Send the given notification.
      *
-     * @param  mixed $notifiable
-     * @param  \Illuminate\Notifications\Notification $notification
-     * @return void
+     * @param mixed $notifiable
+     * @param Notification $notification
+     * @return void|array
+     * @throws InvalidArgumentException|NoGatewayAvailableException
      */
     public function send($notifiable, Notification $notification)
     {
-        /** @var BaseMessage $message */
+        /** @var Message $message */
         $message = $notification->toMobile($notifiable);
-
-        if (!$notifiable->routeNotificationFor('mobile', $notification) && !$message instanceof BaseMessage) {
+        if (!$notifiable->routeNotificationFor('mobile', $notification) && !$message instanceof Message) {
             return;
         }
         $mobile = $notifiable->routeNotificationFor('mobile', $notification);
-        app(Sms::class)->send($mobile, $message);
+        return sendSms($mobile, $message);
     }
 }

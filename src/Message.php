@@ -5,20 +5,17 @@
  * @link http://www.larva.com.cn/
  * @license http://www.larva.com.cn/license/
  */
+
 namespace Larva\Sms;
 
-use Overtrue\EasySms\Message;
 use Overtrue\EasySms\Strategies\OrderStrategy;
 
 /**
- * Class BaseMessage
+ * 消息基类
  *
  * @author Tongle Xu <xutongle@gmail.com>
  */
-class BaseMessage extends Message
+class Message extends \Overtrue\EasySms\Message
 {
-    /**
-     * @var string 发送顺序
-     */
-    protected $strategy = OrderStrategy::class;
+
 }

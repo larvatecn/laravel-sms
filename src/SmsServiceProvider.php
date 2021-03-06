@@ -42,10 +42,10 @@ class SmsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(EasySms::class, function ($app) {
-            return new EasySms($app['config']['sms']);
+        $this->app->singleton(EasySms::class, function () {
+            return new EasySms($this->app['config']['sms']);
         });
-        Notification::extend('phone', function ()  {
+        Notification::extend('mobile', function ()  {
             return new NotificationChannel();
         });
     }
