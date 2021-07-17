@@ -15,6 +15,7 @@ use Overtrue\EasySms\EasySms;
  * Class Sms
  *
  * @mixin EasySms
+ * @see EasySms
  */
 class Sms extends Facade
 {
@@ -23,7 +24,7 @@ class Sms extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return EasySms::class;
     }
