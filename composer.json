@@ -25,10 +25,7 @@
     "laravel": {
       "providers": [
         "Larva\\Sms\\SmsServiceProvider"
-      ],
-      "aliases": {
-        "Sms": "Larva\\Sms\\Sms"
-      }
+      ]
     }
   },
   "prefer-stable": true

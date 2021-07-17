@@ -18,7 +18,7 @@ if (!function_exists('sms')) {
      * @return array|EasySms
      * @throws NoGatewayAvailableException|InvalidArgumentException
      */
-    function sms()
+    function sms(): array|EasySms
     {
         $arguments = func_get_args();
         /** @var EasySms $sms */
