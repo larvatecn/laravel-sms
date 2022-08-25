@@ -6,8 +6,22 @@ This is a sms expansion for the laravel
 [![Latest Stable Version](https://poser.pugx.org/larva/laravel-sms/v/stable.png)](https://packagist.org/packages/larva/laravel-sms)
 [![Total Downloads](https://poser.pugx.org/larva/laravel-sms/downloads.png)](https://packagist.org/packages/larva/laravel-sms)
 
+## 特点
+
+1. 支持目前市面多家服务商
+1. 一套写法兼容所有平台
+1. 简单配置即可灵活增减服务商
+1. 内置多种服务商轮询策略、支持自定义轮询策略
+1. 统一的返回值格式，便于日志与监控
+1. 自动轮询选择可用的服务商
+1. 更多等你去发现与改进...
+
 ## 平台支持
 
+- [腾讯云 SMS](https://cloud.tencent.com/product/sms)
+- [Ucloud](https://www.ucloud.cn)
+- [七牛云](https://www.qiniu.com/)
+- [SendCloud](http://www.sendcloud.net/)
 - [阿里云](https://www.aliyun.com/)
 - [云片](https://www.yunpian.com)
 - [Submail](https://www.mysubmail.com)
@@ -15,15 +29,25 @@ This is a sms expansion for the laravel
 - [容联云通讯](http://www.yuntongxun.com)
 - [互亿无线](http://www.ihuyi.com)
 - [聚合数据](https://www.juhe.cn)
-- [SendCloud](http://www.sendcloud.net/)
 - [百度云](https://cloud.baidu.com/)
 - [华信短信平台](http://www.ipyy.com/)
 - [253云通讯（创蓝）](https://www.253.com/)
 - [融云](http://www.rongcloud.cn)
 - [天毅无线](http://www.85hu.com/)
-- [腾讯云 SMS](https://cloud.tencent.com/product/sms)
-- [阿里大于](https://www.alidayu.com/)(不推荐使用，请使用阿里云)
 - [阿凡达数据](http://www.avatardata.cn/)
+- [华为云](https://www.huaweicloud.com/product/msgsms.html)
+- [网易云信](https://yunxin.163.com/sms)
+- [云之讯](https://www.ucpaas.com/index.html)
+- [凯信通](http://www.kingtto.cn/)
+- [UE35.net](http://uesms.ue35.cn/)
+- [短信宝](http://www.smsbao.com/)
+- [Tiniyo](https://tiniyo.com/)
+- [摩杜云](https://www.moduyun.com/)
+- [融合云（助通）](https://www.ztinfo.cn/products/sms)
+- [蜘蛛云](https://zzyun.com/)
+- [融合云信](https://maap.wo.cn/)
+- [天瑞云](http://cms.tinree.com/)
+
 
 ## 环境需求
 
