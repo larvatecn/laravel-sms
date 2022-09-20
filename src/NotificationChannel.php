@@ -29,11 +29,11 @@ class NotificationChannel
     public function send($notifiable, Notification $notification)
     {
         /** @var Message $message */
-        $message = $notification->toMobile($notifiable);
-        if (!$notifiable->routeNotificationFor('mobile', $notification) && !$message instanceof Message) {
+        $message = $notification->toPhone($notifiable);
+        if (!$notifiable->routeNotificationFor('phone', $notification) && !$message instanceof Message) {
             return;
         }
-        $mobile = $notifiable->routeNotificationFor('mobile', $notification);
+        $mobile = $notifiable->routeNotificationFor('phone', $notification);
         return sms($mobile, $message);
     }
 }
