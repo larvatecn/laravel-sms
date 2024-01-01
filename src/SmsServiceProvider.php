@@ -7,8 +7,8 @@
 
 namespace Larva\Sms;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\ServiceProvider;
 use Overtrue\EasySms\EasySms;
 
 /**
@@ -21,7 +21,7 @@ class SmsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $source = realpath($raw = __DIR__ . '/../config/sms.php') ?: $raw;
 
